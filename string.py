@@ -10,28 +10,16 @@ s = 'aaaabbсaa' преобразуется в 'a4b2с1a2', то есть гру
 
 #ggtyg
 a = str(input())
+s = 1
 i = 0
-q = 1
 l = len(a)
-while i <= l:
-    for j in a:
-        if a.find(a[i+1]):
-            c = a[i+1]
-            if j == c:
-                i += 1
-                q += i
-            elif j != c:
-                print(j + str(q))
-                q = 1
-                i += 1
-        else:
-            c = a[-1]
-            if j == c:
-                i = 0
-                i += 1
-                q += i
-            elif j != c:
-                print(j + str(q))
-    else:
-        break
+for i in range(l-1):
+    if a[i] == a[i+1]:
+        s+=1
+    elif a[i] != a[i+1]:
+        print(a[i]+str(s), end='')
+        s = 1
+print(a[-1]+str(s))
+
+
 
