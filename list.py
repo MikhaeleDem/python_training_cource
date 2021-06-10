@@ -41,7 +41,15 @@ else:
 Для решения задачи может пригодиться метод sort списка.
 
 Выводимые числа не должны повторяться, порядок их вывода может быть произвольным."""
-
+# 5 1 5 6 6 4 2 3
 a = [int(i) for i in input().split()]
 a.sort()
-print(a)
+b = [a[i] for i in range(len(a)) if i != a.index(a[i])]
+print(*b, end=' ')
+c = []
+for i in range(len(b)):
+    if b[i] not in c:
+        c.append(b[i])
+print(*c, end=' ')
+
+
