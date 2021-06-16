@@ -6,16 +6,17 @@ keykey и valuevalue.
 Требуется реализовать только эту функцию, кода вне её не должно быть.
 Функция не должна вызывать внутри себя функции input и print.'''
 
-d = {1:1}
-def update_dictionary(d, key, value):
-    if key in d:
-        d[key] = [value]
-    else:
-        if key * 2 in d:
-            d[key * 2] = value
-        else:
-            d[key * 2].append(value)
-            d[key*2] = value
 
-#print(d)
-print(update_dictionary(d, 1, -1))
+'''def update_dictionary(d, key, value):
+    if key in d:
+        d[key] += [value]
+    elif 2 * key in d:
+        d[2 * key] += [value]
+    else:
+        d[2 * key] = [value]
+
+d = {1:-1}
+print(d)
+print(update_dictionary(d, 2, -2))'''
+
+
